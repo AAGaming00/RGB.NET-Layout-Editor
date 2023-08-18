@@ -45,6 +45,8 @@ namespace LayoutEditor.UI.Controls
             AvailableLedIds = new BindableCollection<string>();
             LedCursor = Cursors.Hand;
 
+            UpdateAvailableLedIds();
+
             ApplyLogicalLayout();
         }
 
@@ -115,8 +117,6 @@ namespace LayoutEditor.UI.Controls
 
         public void Update()
         {
-            ApplyLogicalLayout();
-            UpdateAvailableLedIds();
             PopulateInput();
             CreateLedGeometry();
         }
